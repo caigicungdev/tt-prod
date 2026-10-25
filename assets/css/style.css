@@ -33,7 +33,7 @@
 /* ---------- Base ---------- */
 *, *::before, *::after { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; scroll-padding-top: calc(var(--header-h) + 8px); }
 
 body {
   margin: 0;
@@ -112,11 +112,23 @@ h1, h2, h3, p { margin: 0; }
 
 /* ---------- Header ---------- */
 .site-header {
-  position: relative;
+  position: -webkit-sticky;
+  position: sticky;          /* stays at the top while scrolling */
+  top: 0;
   z-index: 50;
   background: var(--bg);
   border-bottom: 1px solid var(--line);
+  transition: background-color .3s ease, box-shadow .3s ease;
 }
+/* after scrolling a little: translucent glass + soft shadow */
+.site-header.is-scrolled {
+  background: rgba(14, 13, 12, .82);
+  -webkit-backdrop-filter: saturate(140%) blur(14px);
+  backdrop-filter: saturate(140%) blur(14px);
+  box-shadow: 0 10px 30px -18px rgba(0, 0, 0, .9);
+}
+/* the open mobile menu needs a solid bar behind it */
+.menu-open .site-header.is-scrolled { background: var(--black); -webkit-backdrop-filter: none; backdrop-filter: none; }
 .site-header__inner {
   display: flex;
   align-items: center;

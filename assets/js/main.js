@@ -108,6 +108,14 @@
     }, { passive: true });
   }
 
+  /* ---------- 0d. Sticky header: glass style once the page is scrolled ---------- */
+  var headerEl = document.querySelector('.site-header');
+  if (headerEl) {
+    var onScrollHeader = function () { headerEl.classList.toggle('is-scrolled', window.scrollY > 8); };
+    window.addEventListener('scroll', onScrollHeader, { passive: true });
+    onScrollHeader();
+  }
+
   /* ---------- 1. Mobile menu ---------- */
   var body = document.body;
   var toggle = document.querySelector('.menu-toggle');
