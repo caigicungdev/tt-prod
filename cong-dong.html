@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Góc người hâm mộ — Trấn Thành Archive</title>
+  <meta name="description" content="Ảnh, kỷ niệm và cảm nhận về Trấn Thành do người hâm mộ chia sẻ.">
+  <meta name="theme-color" content="#000000">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Be+Vietnam+Pro:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css?v=4">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip-link" href="#noi-dung">Bỏ qua đến nội dung</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html">
+        <span class="brand__mark">TT</span>
+        <span class="brand__text">
+          <span class="brand__name">TRẤN THÀNH ARCHIVE</span>
+          <span class="brand__sub">Kho lưu trữ của người hâm mộ</span>
+        </span>
+      </a>
+
+      <nav id="main-nav" class="main-nav" aria-label="Điều hướng chính">
+        <a href="index.html#tieu-su">Tiểu sử</a>
+        <a href="index.html#dien-anh">Điện ảnh</a>
+        <a href="index.html#diem-tin">Điểm tin</a>
+        <a href="cong-dong.html" aria-current="page">Góc người hâm mộ</a>
+        <a class="btn btn--accent btn--sm" href="cong-dong.html#dang-bai" data-compose>Đăng bài</a>
+        <span class="main-nav__note">Kho lưu trữ của người hâm mộ — không phải trang chính thức.</span>
+      </nav>
+
+      <div class="header-actions">
+        <div class="auth-slot" data-auth></div>
+        <button class="menu-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="Mở menu">
+          <svg class="menu-toggle__open" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 8h16M4 16h16"/></svg>
+          <svg class="menu-toggle__close" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="noi-dung" class="page">
+    <section class="page-hero">
+      <div class="container page-hero__inner">
+        <div>
+          <span class="eyebrow">Góc người hâm mộ</span>
+          <h1 class="page-hero__title">Do người hâm mộ <span class="outline">đóng góp</span></h1>
+          <p class="page-hero__lead" data-tab-intro>Ảnh, kỷ niệm và cảm nhận do người hâm mộ chia sẻ — đã được admin duyệt.</p>
+        </div>
+        <a class="btn btn--accent btn--lg" href="#dang-bai" data-compose>
+          <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+          Đăng bài
+        </a>
+      </div>
+    </section>
+
+    <section class="container feed-wrap" aria-label="Bảng tin">
+      <span data-note hidden></span>
+      <div class="tabs" role="tablist" aria-label="Chọn bảng tin">
+        <button type="button" role="tab" class="tab is-active" aria-selected="true" data-tab="all">Mới nhất</button>
+        <button type="button" role="tab" class="tab" aria-selected="false" data-tab="mine">Bài của tôi</button>
+      </div>
+      <div class="feed feed--page" data-grid aria-live="polite"></div>
+      <div class="feed__more">
+        <button type="button" class="btn btn--ghost" data-more hidden>Xem thêm bài</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <span>Trang lưu trữ do người hâm mộ thực hiện — không phải trang chính thức của Trấn Thành.</span>
+      <span>Hình ảnh và tư liệu thuộc bản quyền của chủ sở hữu.</span>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+  <script type="module" src="assets/js/community/feed.js"></script>
+</body>
+</html>

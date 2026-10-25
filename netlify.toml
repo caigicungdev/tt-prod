@@ -1,0 +1,6 @@
+# Netlify: tạo assets/js/config.js từ biến môi trường rồi đăng cả thư mục.
+# Đặt biến tại: Netlify → Project configuration → Environment variables
+#   SUPABASE_URL, SUPABASE_ANON_KEY
+[build]
+  command = "sh scripts/make-config.sh"
+  publish = "."

@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trấn Thành Archive — Kho lưu trữ của người hâm mộ</title>
+  <meta name="description" content="Kho lưu trữ của người hâm mộ về Trấn Thành: tiểu sử, phim đã đạo diễn, chương trình truyền hình, dòng thời gian sự nghiệp và tư liệu.">
+  <meta name="theme-color" content="#000000">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Be+Vietnam+Pro:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css?v=4">
+  <script>
+    /* Runs before first paint: enables JS styles + the hero intro.
+       Full "curtain" intro plays once per browser session; later visits get a quicker version.
+       Safety net: if anything fails, content is revealed after 4 s. */
+    (function (d) {
+      var h = d.documentElement;
+      h.classList.add('js');
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      h.classList.add('intro');
+      try { if (sessionStorage.getItem('tt-intro')) h.classList.add('intro-fast'); } catch (e) {}
+      setTimeout(function () { h.classList.add('intro-play'); }, 4000);
+    })(document);
+  </script>
+</head>
+<body>
+  <!-- Opening curtain (only shown on the first visit of a session) -->
+  <div class="intro-curtain" aria-hidden="true">
+    <span class="intro-curtain__half intro-curtain__half--top"></span>
+    <span class="intro-curtain__half intro-curtain__half--bottom"></span>
+    <span class="intro-curtain__label">Trấn Thành · Archive</span>
+    <span class="intro-curtain__line"></span>
+  </div>
+
+  <a class="skip-link" href="#noi-dung">Bỏ qua đến nội dung</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="#top">
+        <span class="brand__mark">TT</span>
+        <span class="brand__text">
+          <span class="brand__name">TRẤN THÀNH ARCHIVE</span>
+          <span class="brand__sub">Kho lưu trữ của người hâm mộ</span>
+        </span>
+      </a>
+
+      <nav id="main-nav" class="main-nav" aria-label="Điều hướng chính">
+        <a href="#tieu-su">Tiểu sử</a>
+        <a href="#dien-anh">Điện ảnh</a>
+        <a href="#diem-tin">Điểm tin</a>
+        <a href="#cong-dong">Góc người hâm mộ</a>
+        <a class="btn btn--accent btn--sm" href="cong-dong.html#dang-bai" data-compose>Đăng bài</a>
+        <span class="main-nav__note">Kho lưu trữ của người hâm mộ — không phải trang chính thức.</span>
+      </nav>
+
+      <div class="header-actions">
+        <div class="auth-slot" data-auth></div>
+        <button class="menu-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="Mở menu">
+          <svg class="menu-toggle__open" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 8h16M4 16h16"/></svg>
+          <svg class="menu-toggle__close" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="noi-dung">
+
+    <!-- ============ HERO ============ -->
+    <section id="top" class="hero">
+      <div class="hero__split">
+
+        <!-- Left: portrait panel -->
+        <div class="hero__portrait">
+          <h1 class="hero__title">
+            <span class="hero__word hero__word--solid">Trấn</span>
+            <span class="hero__word hero__word--outline">Thành</span>
+          </h1>
+          <img class="hero__img" src="assets/images/portrait.png" width="476" height="644" alt="Chân dung Trấn Thành trong bộ vest đen, tay chạm cằm">
+          <span class="hero__credits">Diễn viên — MC — Đạo diễn — Biên kịch</span>
+        </div>
+
+        <!-- Right: black-and-white photo slideshow.
+             To add a slide: copy one .slide block, change the image + caption, and add a matching progress button. -->
+        <div class="hero__slideshow" data-slideshow data-interval="5000" aria-roledescription="carousel" aria-label="Ảnh sự kiện">
+          <div class="slide is-active" data-slide>
+            <img src="assets/images/slide-danaff.webp" alt="Trấn Thành nhận giải tại Liên hoan phim châu Á Đà Nẵng (DANAFF)" style="object-position: 50% 25%">
+          </div>
+          <div class="slide" data-slide>
+            <img src="assets/images/slide-award.jpg" alt="Trấn Thành phát biểu tại một lễ trao giải" style="object-position: 40% 30%" loading="lazy">
+          </div>
+
+          <div class="slideshow__shade" aria-hidden="true"></div>
+
+          <div class="slideshow__progress">
+            <button type="button" class="slideshow__bar is-active" data-slide-to="0" aria-label="Ảnh 1: DANAFF"></button>
+            <button type="button" class="slideshow__bar" data-slide-to="1" aria-label="Ảnh 2: Lễ trao giải"></button>
+          </div>
+
+          <div class="slideshow__captions" aria-live="polite">
+            <div class="caption is-active" data-caption>
+              <span class="caption__index">01 / 02</span>
+              <span class="caption__title">DANAFF</span>
+              <span class="caption__note">[Năm · mô tả sự kiện]</span>
+            </div>
+            <div class="caption" data-caption>
+              <span class="caption__index">02 / 02</span>
+              <span class="caption__title">Lễ trao giải</span>
+              <span class="caption__note">[Năm · mô tả sự kiện]</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tagline + actions -->
+      <div class="hero__footer">
+        <p class="hero__tagline">Từ sân khấu hài, ghế MC đến vị trí đạo diễn có tổng doanh thu phòng vé cao nhất Việt Nam. Một góc nhỏ của Hai Thành</p>
+        <div class="hero__actions">
+          <a class="btn btn--accent" href="#dien-anh"><span>Xem phim<span class="hide-xs"> đã đạo diễn</span></span></a>
+          <a class="btn btn--ghost" href="#tieu-su"><span>Tiểu sử<span class="hide-sm"> Trấn Thành</span></span></a>
+        </div>
+      </div>
+
+      <!-- Film-title ticker -->
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker__track">
+          <span class="ticker__group"><span>Bố già</span><span>✦</span><span>Nhà bà Nữ</span><span>✦</span><span>Mai</span><span>✦</span><span>Bộ tứ báo thủ</span><span>✦</span><span>Thỏ ơi!!</span><span>✦</span><span>Em — Tết 2027</span><span>✦</span><span>Cua lại vợ bầu</span><span>✦</span><span>Rap Việt</span><span>✦</span></span>
+          <span class="ticker__group"><span>Bố già</span><span>✦</span><span>Nhà bà Nữ</span><span>✦</span><span>Mai</span><span>✦</span><span>Bộ tứ báo thủ</span><span>✦</span><span>Thỏ ơi!!</span><span>✦</span><span>Em — Tết 2027</span><span>✦</span><span>Cua lại vợ bầu</span><span>✦</span><span>Rap Việt</span><span>✦</span></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STATS ============ -->
+    <section class="stats" aria-label="Con số nổi bật">
+      <div class="container stats__grid">
+        <div class="stat"><span class="stat__value stat__value--accent">2.200+ tỷ</span><span class="stat__label">Tổng doanh thu phòng vé các phim do anh đạo diễn</span></div>
+        <div class="stat"><span class="stat__value">5</span><span class="stat__label">Phim Tết đạo diễn, 2021 – 2026</span></div>
+        <div class="stat"><span class="stat__value">551 tỷ</span><span class="stat__label">“Mai” — phim có doanh thu cao nhất của anh</span></div>
+        <div class="stat"><span class="stat__value">Tết 2027</span><span class="stat__label">Phim mới “Em” khởi quay 7/8/2026</span></div>
+      </div>
+    </section>
+
+    <!-- ============ BIO ============ -->
+    <section id="tieu-su" class="section bio container" data-reveal>
+      <span class="bio__numeral" aria-hidden="true">01</span>
+
+      <div class="section-head">
+        <span class="eyebrow">01 — Tiểu sử</span>
+        <h2 class="bio__title"><span class="outline">Huỳnh</span> <span>Trấn Thành</span></h2>
+      </div>
+
+      <div class="bio__body">
+        <p class="bio__lead">Từ một MC đầy cá tính đến đạo diễn kỷ lục phòng vé</p>
+        <div class="bio__text">
+          <p>Sinh ra và lớn lên tại TP.HCM, Trấn Thành bắt đầu sự nghiệp từ những sân khấu kịch và diễn xuất hài. Nhờ nét duyên dáng cùng khả năng ứng biến linh hoạt, anh nhanh chóng khẳng định tên tuổi ở vai trò MC quốc dân trước khi chạm ngõ điện ảnh và gặt hái những thành công rực rỡ.</p>
+          <ul class="chips" aria-label="Vai trò">
+            <li>Diễn viên</li>
+            <li>MC</li>
+            <li>Đạo diễn</li>
+            <li>Biên kịch</li>
+            <li>Nhà sản xuất</li>
+          </ul>
+        </div>
+      </div>
+
+      <dl class="facts">
+        <div class="fact"><dt>Tên thật</dt><dd>Huỳnh Trấn Thành</dd></div>
+        <div class="fact"><dt>Ngày sinh · TP. Hồ Chí Minh</dt><dd class="accent">05.02.1987</dd></div>
+        <div class="fact"><dt>Bạn đời · kết hôn 2016</dt><dd>Hari Won</dd></div>
+        <div class="fact"><dt>Phim Tết đạo diễn</dt><dd>2021 — 2026</dd></div>
+      </dl>
+    </section>
+
+    <!-- ============ FILMS ============ -->
+    <section id="dien-anh" class="section films" data-reveal>
+      <div class="container section-head section-head--row">
+        <div>
+          <span class="eyebrow">02 — Điện ảnh</span>
+          <h2 class="h2">Năm mùa Tết, năm cú nổ phòng vé</h2>
+        </div>
+        <a class="link-more" href="#kho">Toàn bộ phim đã tham gia →</a>
+      </div>
+
+      <p class="container films__hint">Vuốt ngang để xem →</p>
+      <div class="films__rail">
+        <article class="film">
+          <div class="film__poster"><img src="assets/images/posters/bo-gia.jpg" alt="Poster phim Bố già" loading="lazy" width="640" height="960"></div>
+          <h3 class="film__name">Bố già</h3>
+          <div class="film__meta"><span>Tết 2021</span><strong>427 tỷ</strong></div>
+          <span class="film__note">Đồng đạo diễn với Vũ Ngọc Đãng</span>
+        </article>
+        <article class="film">
+          <div class="film__poster"><img src="assets/images/posters/nha-ba-nu.jpg" alt="Poster phim Nhà bà Nữ" loading="lazy" width="640" height="960"></div>
+          <h3 class="film__name">Nhà bà Nữ</h3>
+          <div class="film__meta"><span>Tết 2023</span><strong>475 tỷ</strong></div>
+          <span class="film__note">Đạo diễn, biên kịch</span>
+        </article>
+        <article class="film">
+          <div class="film__poster"><img src="assets/images/posters/mai.jpg" alt="Poster phim Mai" loading="lazy" width="640" height="960"></div>
+          <h3 class="film__name">Mai</h3>
+          <div class="film__meta"><span>Tết 2024</span><strong>551 tỷ</strong></div>
+          <span class="film__note">Doanh thu cao nhất của anh</span>
+        </article>
+        <article class="film">
+          <div class="film__poster"><img src="assets/images/posters/bo-tu-bao-thu.jpg" alt="Poster phim Bộ tứ báo thủ" loading="lazy" width="640" height="960"></div>
+          <h3 class="film__name">Bộ tứ báo thủ</h3>
+          <div class="film__meta"><span>Tết 2025</span><strong>332 tỷ</strong></div>
+          <span class="film__note">Phim hài Tết</span>
+        </article>
+        <article class="film">
+          <div class="film__poster"><img src="assets/images/posters/tho-oi.jpg" alt="Poster phim Thỏ ơi!!" loading="lazy" width="640" height="960"></div>
+          <h3 class="film__name">Thỏ ơi!!</h3>
+          <div class="film__meta"><span>Tết 2026</span><strong>427+ tỷ*</strong></div>
+          <span class="film__note">Phim tâm lý</span>
+        </article>
+      </div>
+
+      <div class="container">
+        <figure class="chart">
+          <figcaption class="chart__head">
+            <span class="chart__title">Doanh thu phòng vé (tỷ đồng)</span>
+            <span class="chart__src">Theo báo chí · cập nhật 10/2026</span>
+          </figcaption>
+          <!-- --w = revenue / 551 (the highest) -->
+          <div class="chart__rows">
+            <div class="bar"><span class="bar__label">Bố già</span><span class="bar__track"><span class="bar__fill" style="--w: 77%"></span></span><span class="bar__value">427</span></div>
+            <div class="bar"><span class="bar__label">Nhà bà Nữ</span><span class="bar__track"><span class="bar__fill" style="--w: 86%"></span></span><span class="bar__value">475</span></div>
+            <div class="bar bar--top"><span class="bar__label">Mai</span><span class="bar__track"><span class="bar__fill" style="--w: 100%"></span></span><span class="bar__value">551</span></div>
+            <div class="bar"><span class="bar__label">Bộ tứ báo thủ</span><span class="bar__track"><span class="bar__fill" style="--w: 60%"></span></span><span class="bar__value">332</span></div>
+            <div class="bar"><span class="bar__label">Thỏ ơi!!</span><span class="bar__track"><span class="bar__fill" style="--w: 77%"></span></span><span class="bar__value">427+*</span></div>
+          </div>
+          <p class="chart__note">* “Thỏ ơi!!” đạt 427 tỷ vào 7/3/2026 khi vẫn còn chiếu rạp; con số cuối cùng cần cập nhật.</p>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ NEWS ============ -->
+    <section id="diem-tin" class="section container" aria-labelledby="tin-moi" data-reveal>
+      <div class="section-head">
+        <span class="eyebrow">03 — Điểm tin</span>
+        <h2 id="tin-moi" class="h2">Mới cập nhật</h2>
+      </div>
+      <div class="news">
+        <article class="news__item news__item--lead">
+          <span class="news__meta">19/10/2026 · Phòng vé</span>
+          <h3 class="news__title">Kỷ lục phim đầu tay của “Bố già” bị “Trại buôn người” vượt qua</h3>
+          <p class="news__text">Tổng doanh thu sự nghiệp đạo diễn của Trấn Thành vẫn dẫn đầu, trên 2.200 tỷ đồng.</p>
+        </article>
+        <article class="news__item">
+          <span class="news__meta">8/2026 · Dự án mới</span>
+          <h3 class="news__title">Phim “Em” khởi quay, nhắm mùa Tết 2027</h3>
+          <p class="news__text">[Tóm tắt thông tin dàn diễn viên, ngày ra mắt khi được công bố]</p>
+        </article>
+        <article class="news__item">
+          <span class="news__meta">3/2026 · Phòng vé</span>
+          <h3 class="news__title">“Thỏ ơi!!” vượt “Bố già”: “Con Thỏ chính thức qua mặt Ba Sang”</h3>
+          <p class="news__text">Phim đạt 427 tỷ đồng vào tối 7/3, thành phim ăn khách thứ ba của anh.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ COMMUNITY ============ -->
+    <section id="cong-dong" class="section container" data-reveal data-community-home>
+      <div class="section-head section-head--row">
+        <div>
+          <span class="eyebrow">04 — Góc người hâm mộ</span>
+          <h2 class="h2">Do người hâm mộ đóng góp</h2>
+        </div>
+        <div class="section-head__actions">
+          <a class="link-more" href="cong-dong.html">Xem tất cả →</a>
+          <a class="btn btn--accent" href="cong-dong.html#dang-bai" data-compose>Đăng bài</a>
+        </div>
+      </div>
+      <span data-note hidden></span>
+      <div class="feed" data-grid aria-live="polite">
+        <div class="pcard pcard--skeleton" aria-hidden="true"></div>
+        <div class="pcard pcard--skeleton" aria-hidden="true"></div>
+        <div class="pcard pcard--skeleton" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- ============ CONTRIBUTE ============ -->
+    <section id="dong-gop" class="section container contribute-wrap" data-reveal>
+      <div class="contribute">
+        <div class="contribute__text">
+          <h2 class="contribute__title">Bạn có ảnh, kỷ niệm hay bài báo cũ?</h2>
+          <p>Đăng nhập bằng Google và chia sẻ ngay — bài sẽ hiện sau khi được duyệt, kèm tên người đóng góp.</p>
+        </div>
+        <div class="contribute__actions">
+          <a class="btn btn--ghost btn--lg" href="cong-dong.html">Xem góc người hâm mộ</a>
+          <a class="btn btn--accent btn--lg" href="cong-dong.html#dang-bai" data-compose>Đăng bài ngay</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <span>Trang lưu trữ do người hâm mộ thực hiện — không phải trang chính thức của Trấn Thành.</span>
+      <span>Hình ảnh và tư liệu thuộc bản quyền của chủ sở hữu.</span>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+  <script type="module" src="assets/js/community/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+# Thông tin kết nối thật — KHÔNG đưa lên git (dùng assets/js/config.example.js làm mẫu)
+assets/js/config.js
+
+.DS_Store
+*.log

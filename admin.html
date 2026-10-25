@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Duyệt bài — Trấn Thành Archive</title>
+  <meta name="description" content="Trang quản trị: duyệt bài của người hâm mộ.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#000000">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Be+Vietnam+Pro:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css?v=4">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip-link" href="#noi-dung">Bỏ qua đến nội dung</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html">
+        <span class="brand__mark">TT</span>
+        <span class="brand__text">
+          <span class="brand__name">TRẤN THÀNH ARCHIVE</span>
+          <span class="brand__sub">Kho lưu trữ của người hâm mộ</span>
+        </span>
+      </a>
+
+      <nav id="main-nav" class="main-nav" aria-label="Điều hướng chính">
+        <a href="index.html#tieu-su">Tiểu sử</a>
+        <a href="index.html#dien-anh">Điện ảnh</a>
+        <a href="index.html#diem-tin">Điểm tin</a>
+        <a href="cong-dong.html">Góc người hâm mộ</a>
+        <a class="btn btn--accent btn--sm" href="cong-dong.html#dang-bai" data-compose>Đăng bài</a>
+        <span class="main-nav__note">Kho lưu trữ của người hâm mộ — không phải trang chính thức.</span>
+      </nav>
+
+      <div class="header-actions">
+        <div class="auth-slot" data-auth></div>
+        <button class="menu-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="Mở menu">
+          <svg class="menu-toggle__open" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 8h16M4 16h16"/></svg>
+          <svg class="menu-toggle__close" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="noi-dung" class="page">
+    <section class="page-hero page-hero--compact">
+      <div class="container page-hero__inner">
+        <div>
+          <span class="eyebrow">Quản trị</span>
+          <h1 class="page-hero__title">Duyệt bài</h1>
+          <p class="page-hero__lead">Bài được duyệt sẽ hiện công khai ngay. Bài bị từ chối chỉ người đăng nhìn thấy, kèm lý do.</p>
+        </div>
+      </div>
+    </section>
+    <section class="container admin">
+      <span data-note hidden></span>
+      <div data-admin><p class="feed__empty">Đang tải…</p></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <span>Trang lưu trữ do người hâm mộ thực hiện — không phải trang chính thức của Trấn Thành.</span>
+      <span>Hình ảnh và tư liệu thuộc bản quyền của chủ sở hữu.</span>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+  <script type="module" src="assets/js/community/admin.js"></script>
+</body>
+</html>
