@@ -879,6 +879,33 @@ body.modal-open { overflow: hidden; }
   font-family: var(--font-display); font-weight: 400;
   font-size: clamp(48px, 7vw, 104px); line-height: 1.12; text-transform: uppercase;
 }
+/* sub-page hero with a background photo (Góc người hâm mộ):
+   desktop — photo fills the right side and fades into black, title stays on the left;
+   phone — photo sits behind the text under a dark gradient */
+.page-hero--photo { position: relative; overflow: hidden; }
+.page-hero--photo .page-hero__inner { position: relative; z-index: 1; padding-block: clamp(72px, 10vw, 150px) clamp(40px, 5vw, 64px); }
+.page-hero--photo .page-hero__inner { flex-direction: column; align-items: flex-start; justify-content: flex-end; gap: 28px; }
+.page-hero--photo .page-hero__inner > div { max-width: min(62%, 860px); }
+.page-hero__bg { position: absolute; top: 0; bottom: 0; right: 0; left: 36%; z-index: 0; }
+.page-hero__bg img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: 70% 28%;
+  filter: grayscale(1) contrast(1.05) brightness(.85);
+}
+.page-hero__bg::after {
+  content: ""; position: absolute; inset: 0;
+  background:
+    linear-gradient(90deg, #000 0%, rgba(0,0,0,.7) 22%, rgba(0,0,0,.15) 55%, rgba(0,0,0,.25) 100%),
+    linear-gradient(0deg, #000 0%, rgba(0,0,0,0) 30%);
+}
+.page-hero--photo .page-hero__lead { color: var(--text-2); }
+@media (max-width: 760px) {
+  .page-hero--photo .page-hero__inner > div { max-width: none; }
+  .page-hero__bg { left: 0; }
+  .page-hero__bg img { object-position: 72% 20%; }
+  .page-hero__bg::after { background: linear-gradient(180deg, rgba(0,0,0,.3) 0%, rgba(0,0,0,.7) 45%, #000 100%); }
+  .page-hero--photo .page-hero__inner { padding-block: 120px 32px; }
+}
 .page-hero--compact .page-hero__title { font-size: clamp(44px, 5.5vw, 72px); }
 .page-hero__lead { margin-top: 12px; max-width: 560px; color: var(--muted); }
 .feed-wrap { padding-top: 32px; padding-bottom: 80px; }
