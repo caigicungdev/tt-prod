@@ -64,6 +64,15 @@ async function createSupabaseApi() {
   const { data: { session } } = await sb.auth.getSession();
   await loadUser(session);
 
+  // khôi phục phần "#..." (VD #cua-toi, #dang-bai) đã nhớ trước khi chuyển sang Google
+  try {
+    const back = sessionStorage.getItem('tt-return-hash');
+    if (back) {
+      sessionStorage.removeItem('tt-return-hash');
+      if (session && !location.hash) history.replaceState(null, '', location.pathname + back);
+    }
+  } catch (e) { /* bỏ qua */ }
+
   sb.auth.onAuthStateChange((event, s) => {
     if (event === 'INITIAL_SESSION') return;
     // chạy ngoài callback để tránh khoá phiên của supabase-js
@@ -100,7 +109,10 @@ async function createSupabaseApi() {
     onAuthChange(fn) { listeners.add(fn); return () => listeners.delete(fn); },
 
     async signIn() {
-      const redirectTo = location.origin + location.pathname + location.hash;
+      // Quay về đúng trang đang xem. Không gửi kèm phần "#..." vì Supabase so khớp
+      // đường dẫn với danh sách Redirect URLs; phần # được nhớ tạm rồi khôi phục sau khi đăng nhập.
+      try { if (location.hash) sessionStorage.setItem('tt-return-hash', location.hash); } catch (e) {}
+      const redirectTo = location.origin + location.pathname;
       must(await sb.auth.signInWithOAuth({ provider: 'google', options: { redirectTo } }));
     },
     async signOut() { await sb.auth.signOut(); },
