@@ -9,7 +9,7 @@
   var hasIntro = root.classList.contains('intro');
   var fullIntro = hasIntro && !root.classList.contains('intro-fast');
   // when the hero has finished animating in (ms) — the slideshow waits for this
-  var introDone = hasIntro ? (fullIntro ? 2900 : 1900) : 0;
+  var introDone = hasIntro ? (fullIntro ? 3900 : 1900) : 0;
 
   /* ---------- 0a. Split TRẤN / THÀNH into letters ---------- */
   document.querySelectorAll('.hero__word').forEach(function (word) {
@@ -47,7 +47,7 @@
       });
       try { sessionStorage.setItem('tt-intro', '1'); } catch (e) {}
       var curtain = document.querySelector('.intro-curtain');
-      if (curtain) setTimeout(function () { curtain.remove(); }, 2400);
+      if (curtain) setTimeout(function () { curtain.remove(); }, 3300);
     };
     var portrait = document.querySelector('.hero__img');
     var waits = [];
@@ -151,13 +151,14 @@
     var slides = show.querySelectorAll('[data-slide]');
     var bars = show.querySelectorAll('[data-slide-to]');
     var captions = show.querySelectorAll('[data-caption]');
+    var whys = show.querySelectorAll('[data-why]');
     var interval = parseInt(show.getAttribute('data-interval'), 10) || 5000;
     var current = 0;
     var timer = null;
 
     function go(index) {
       current = (index + slides.length) % slides.length;
-      [slides, bars, captions].forEach(function (list) {
+      [slides, bars, captions, whys].forEach(function (list) {
         list.forEach(function (el, i) {
           el.classList.toggle('is-active', i === current);
         });

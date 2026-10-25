@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Be+Vietnam+Pro:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=6">
+  <link rel="stylesheet" href="assets/css/style.css?v=7">
   <script>
     /* Runs before first paint: enables JS styles + the hero intro.
        Full "curtain" intro plays once per browser session; later visits get a quicker version.
@@ -81,34 +81,74 @@
           <span class="hero__credits">Diễn viên — MC — Đạo diễn — Biên kịch</span>
         </div>
 
-        <!-- Right: black-and-white photo slideshow.
-             To add a slide: copy one .slide block, change the image + caption, and add a matching progress button. -->
-        <div class="hero__slideshow" data-slideshow data-interval="5000" aria-roledescription="carousel" aria-label="Ảnh sự kiện">
+        <!-- Right: awards slideshow (black-and-white photos).
+             To add a slide: copy one .slide, one .slideshow__bar, one .caption and one .slideshow__why, then renumber. -->
+        <div class="hero__slideshow" data-slideshow data-interval="6000" aria-roledescription="carousel" aria-label="Giải thưởng tiêu biểu">
           <div class="slide is-active" data-slide>
-            <img src="assets/images/slide-danaff.webp" alt="Trấn Thành nhận giải tại Liên hoan phim châu Á Đà Nẵng (DANAFF)" style="object-position: 50% 25%">
+            <img src="assets/images/award-bong-sen.jpg" alt="Trấn Thành cầm cúp và bằng khen tại Liên hoan Phim Việt Nam" style="object-position: 55% 22%">
           </div>
           <div class="slide" data-slide>
-            <img src="assets/images/slide-award.jpg" alt="Trấn Thành phát biểu tại một lễ trao giải" style="object-position: 40% 30%" loading="lazy">
+            <img src="assets/images/award-mai-vang.jpg" alt="Trấn Thành nhận cúp tại lễ trao Giải Mai Vàng" style="object-position: 50% 30%" loading="lazy">
+          </div>
+          <div class="slide" data-slide>
+            <img src="assets/images/slide-danaff.webp" alt="Trấn Thành nhận giải tại Liên hoan Phim Châu Á Đà Nẵng (DANAFF)" style="object-position: 50% 25%" loading="lazy">
+          </div>
+          <div class="slide" data-slide>
+            <img src="assets/images/award-vtv.jpg" alt="Trấn Thành phát biểu khi nhận giải Ấn tượng VTV" style="object-position: 50% 18%" loading="lazy">
           </div>
 
           <div class="slideshow__shade" aria-hidden="true"></div>
 
           <div class="slideshow__progress">
-            <button type="button" class="slideshow__bar is-active" data-slide-to="0" aria-label="Ảnh 1: DANAFF"></button>
-            <button type="button" class="slideshow__bar" data-slide-to="1" aria-label="Ảnh 2: Lễ trao giải"></button>
+            <button type="button" class="slideshow__bar is-active" data-slide-to="0" aria-label="Giải 1: Giải Bông Sen"></button>
+            <button type="button" class="slideshow__bar" data-slide-to="1" aria-label="Giải 2: Giải Mai Vàng"></button>
+            <button type="button" class="slideshow__bar" data-slide-to="2" aria-label="Giải 3: DANAFF"></button>
+            <button type="button" class="slideshow__bar" data-slide-to="3" aria-label="Giải 4: Ấn tượng VTV"></button>
           </div>
 
           <div class="slideshow__captions" aria-live="polite">
             <div class="caption is-active" data-caption>
-              <span class="caption__index">01 / 02</span>
-              <span class="caption__title">DANAFF</span>
-              <span class="caption__note">[Năm · mô tả sự kiện]</span>
+              <span class="caption__index">01 / 04 · Điện ảnh Quốc gia</span>
+              <span class="caption__title">Giải Bông Sen</span>
+              <span class="caption__sub">Liên hoan Phim Việt Nam</span>
+              <ul class="caption__awards">
+                <li>Nam diễn viên chính xuất sắc nhất — <em>Cua lại vợ bầu</em> (2019)</li>
+                <li>Kịch bản xuất sắc nhất — <em>Bố già</em> (2021)</li>
+              </ul>
             </div>
             <div class="caption" data-caption>
-              <span class="caption__index">02 / 02</span>
-              <span class="caption__title">Lễ trao giải</span>
-              <span class="caption__note">[Năm · mô tả sự kiện]</span>
+              <span class="caption__index">02 / 04 · Nghệ thuật &amp; Giải trí đại chúng</span>
+              <span class="caption__title">Giải Mai Vàng</span>
+              <span class="caption__sub">Báo Người Lao Động</span>
+              <ul class="caption__awards">
+                <li>Nhiều năm liên tiếp: MC được yêu thích nhất</li>
+                <li>Diễn viên hài được yêu thích nhất</li>
+              </ul>
             </div>
+            <div class="caption" data-caption>
+              <span class="caption__index">03 / 04 · Điện ảnh Quốc tế &amp; Khu vực</span>
+              <span class="caption__title">DANAFF</span>
+              <span class="caption__sub">Liên hoan Phim Châu Á Đà Nẵng</span>
+              <ul class="caption__awards">
+                <li>Phim Việt Nam hay nhất — <em>Nhà bà Nữ</em> (2023)</li>
+                <li>Đạo diễn xuất sắc nhất — <em>Nhà bà Nữ</em> (2023), <em>Mai</em> (2024)</li>
+              </ul>
+            </div>
+            <div class="caption" data-caption>
+              <span class="caption__index">04 / 04 · Truyền hình Quốc gia</span>
+              <span class="caption__title">Ấn tượng VTV</span>
+              <span class="caption__sub">VTV Awards</span>
+              <ul class="caption__awards">
+                <li>MC Ấn tượng &amp; Nghệ sĩ hài Ấn tượng (2015, 2016)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="slideshow__whys">
+            <p class="slideshow__why is-active" data-why>Giải thưởng điện ảnh cấp Nhà nước lâu đời và cao quý nhất Việt Nam, do Bộ Văn hóa, Thể thao và Du lịch tổ chức — sự công nhận chính thống cao nhất cho người làm điện ảnh.</p>
+            <p class="slideshow__why" data-why>Tổ chức từ năm 1995, Mai Vàng là thước đo tình cảm của công chúng và mức độ phủ sóng của nghệ sĩ trong giới giải trí.</p>
+            <p class="slideshow__why" data-why>Ban giám khảo là các chuyên gia, đạo diễn tên tuổi trong nước và quốc tế — khẳng định năng lực đạo diễn của Trấn Thành trên bản đồ điện ảnh chuyên nghiệp.</p>
+            <p class="slideshow__why" data-why>Giải thưởng uy tín nhất của Đài Truyền hình Việt Nam, tôn vinh những gương mặt để lại dấu ấn sâu sắc nhất trên sóng truyền hình quốc gia trong năm.</p>
           </div>
         </div>
       </div>
